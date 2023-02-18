@@ -24,6 +24,11 @@ mongoose.connect(URL,{
 .catch(err=>console.log(err));
 
 
+app.get('/api/',async(req,res)=>{
+    res.json({
+        "Task":"@sprittle"
+    })
+})
 app.post('/api/register/master',async (req,res)=>{
     console.log(req.body);
     try{
